@@ -11,11 +11,18 @@ components:
     container:
       image: quay.io/kahlai/dotnet-devspaces-ws:latest
       memoryLimit: 3Gi
+      env:
+        - name: NODE_OPTIONS
+          value: "--openssl-legacy-provider"
       endpoints:
         - exposure: public
-          name: aspnet
+          name: quiz-api
           protocol: http
           targetPort: 5000
+        - exposure: public
+          name: quiz-client
+          protocol: http
+          targetPort: 3000
       volumeMounts:
         - name: nuget
           path: /home/user/.nuget
