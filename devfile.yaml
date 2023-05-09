@@ -11,9 +11,9 @@ components:
     container:
       image: quay.io/kahlai/dotnet-devspaces-ws:latest
       memoryLimit: 3Gi
-      env:
-        - name: NODE_OPTIONS
-          value: "--openssl-legacy-provider"
+      # env:
+      #   - name: NODE_OPTIONS
+      #     value: "--openssl-legacy-provider"
       endpoints:
         - exposure: public
           name: quiz-api
