@@ -9,7 +9,7 @@ projects:
 components:
   - name: tools
     container:
-      image: quay.io/mloriedo/udi-ubi9:20230329
+      image: quay.io/kahlai/dotnet-devspaces-ws:latest
       memoryLimit: 3Gi
       endpoints:
         - exposure: public
